@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Baloo+Bhai+2:wght@400..800&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+:root {
+    --a:0
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+    position: sticky;
+}
+
+.left {
+    width: 25vw;
+    overflow: auto;
+}
+
+.right {
+    width: 75vw;
+    padding: 1px 0px;
+    margin: 4px 2px;
+    /* position: relative; */
+}
+
+.home ul li {
+    display: flex;
+    gap: 8px;
+    width: 20px;
+    list-style: none;
+    padding-top: 6px;
+}
+
+.heading {
+    font-size: 13px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cross {
+    display: none;
+}
+
+.footer ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 10px;
+    margin-top: 68px;
+}
+
+.footer ul li a {
+    color: rgb(152, 152, 152);
+    text-decoration: none;
+    padding: 4px;
+}
+
+.footer ul li {
+    padding: 4px;
+}
+
+.library {
+    height: 75vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(44, 43, 43);
+}
+
+header>* {
+    padding: 14px;
+}
+
+.spotifyplaylist {
+    padding: 11px;
+}
+
+.cardcontainer {
+    margin: 7px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    max-height: 60vh;
+    border-radius: 5px;
+}
+
+.card {
+    width: 144px;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: #313131;
+    position: relative;
+    max-height: 250px;
+    transition: all 0.4s;
+}
+
+.card>* {
+    padding-top: 6px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+p {
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+.card:hover {
+    background-color: #9a9a9aaf;
+    cursor: pointer;
+    --a: 1;
+}
+.play-button {
+    width: 44px;
+    height: 36px;
+    background-color: rgba(12, 116, 235, 0.862);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0.2px solid #0e0e0e;
+    position: absolute;
+    top: 120px;
+    right: 14px;
+    opacity: var(--a);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.play-button i {
+    color: black;
+    position: absolute;
+    bottom: 8px;
+    font-size: 28px;
+}
+
+.sign {
+    background-color: rgb(44, 43, 43);
+    color: rgb(161, 161, 161);
+    font-size: 12px;
+    border: none;
+    margin-right: 16px;
+}
+
+.sign:hover {
+    color: rgb(253, 254, 255);
+}
+
+.log {
+    margin-right: 16px;
+    padding: 6px 12px;
+    border-radius: 48px;
+    border: none;
+}
+
+.log:hover {
+    background-color: #2d72a3;
+    color: aliceblue;
+}
+
+.ham {
+    display: none;
+}
+
+.nav i {
+    font-size: 21px;
+    padding: 2px;
+}
+
+.playbar {
+    position:fixed;
+    bottom: 8px;
+    background-color: rgb(33, 38, 49);
+    padding: 8px;
+    margin: 0px 5px;
+    width: 73%;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+.sbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-right: 132px;
+    margin-bottom: 5px;
+}
+
+.songlist {
+    padding: 10px 20px;
+    overflow: scroll;
+    height: 200px;
+    background-color: rgb(44, 43, 43);
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    cursor: pointer;
+    padding: 8px;
+    width: 196px;
+    font-size: 12px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    gap: 10px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songlist ul li i {
+    font-size: 19px;
+}
+
+.seekbar {
+    position: absolute;
+    bottom: 5px;
+    height: 5px;
+    background-color: rgb(229, 236, 243);
+    width: 95%;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.circle,
+.vcircle {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(202, 210, 217);
+    border-radius: 12px;
+    position: relative;
+    bottom: 4px;
+    left: 0%;
+    transition: left 0.6s;
+}
+
+.songinfo {
+    width: 216px;
+    font-size: 11px;
+}
+
+#novol {
+    display: none;
+    cursor:pointer;
+}
+
+#volumei {
+    display: block;
+    cursor:pointer;
+}
+
+.range input {
+    width: 100px;
+    position: absolute;
+    top: 8px;
+    right: 100px;
+}
+
+.songtime {
+    width: 36px;
+    font-size: 10px;
+    margin-right: 44px;
+}
+
+@media (hover: none) {
+  .sign:active {
+    color: rgb(253, 254, 255);
+  }
+  .log:active {
+    background-color: #2d72a3;
+    color: aliceblue;
+}
+}
+
+
+
+@media (max-width:1200px) {
+    .left {
+        position: absolute;
+        left: -120%;
+        transition: all 0.3s ease-in;
+        z-index: 1;
+        width: 260px;
+    }
+
+
+
+    .songlist {
+        height: 350px;
+        margin-top: 15px;
+    }
+
+    .right {
+        width: 100vw;
+        height: 210vw;
+        padding: 8px;
+    }
+
+
+    .playbar {
+        width: calc(100vw - 45px);
+        margin: 3px;
+        bottom: 50px;
+        min-height: 80px;
+    }
+
+    .seekbar {
+        width: calc(100vw - 60px);
+        /* width: 90%; */
+        bottom: 10px;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .nav i {
+        display: none;
+    }
+
+    #cross {
+        display: block;
+    }
+
+    .sbtn {
+        position: absolute;
+        top: 18px;
+        font-size: 22px;
+    }
+
+    .songinfo {
+        position: absolute;
+        right: 6px;
+        top: 8px;
+    }
+
+    .songtime {
+        position: absolute;
+        right: 6px;
+        top: 28px;
+    }
+
+    .cardcontainer {
+        overflow-y: scroll;
+        min-height: 75vh;
+        justify-content: center;
+        margin: 0px;
+    }
+
+
+    .range input {
+        position: absolute;
+        top: 0px;
+        left: 27px;
+    }
+
+    .vol,
+    .novol {
+        position: absolute;
+        top: 47px;
+        right: 180px;
+        font-size: 18px;
+    }
+}
